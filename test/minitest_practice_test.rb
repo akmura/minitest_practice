@@ -40,9 +40,25 @@ class MinitestPracticeTest < Minitest::Test
     assert_raises ZeroDivisionError do @main.devide(2,0) end
   end
   
-  def text_fizz_buz
-
+  def test_fizz_buz
+    [1,2,4,7,8,11,13,14].each{|input|
+      assert_equal(nil,@main.fizz_buzz(input))
+    }
+    [15,30,45,60,75,90,105,120].each{|input|
+      assert_equal('FizzBuzz',@main.fizz_buzz(input))
+    }
+    [3,6,9,12,18,21,24,27,33].each{|input|
+      assert_equal('Fizz',@main.fizz_buzz(input))
+    }
+    [5,10,20,25,35,40,50,55].each{|input|
+      assert_equal('Buzz',@main.fizz_buzz(input))
+    }
+    
+    
 
   end
 
+  def test_hello
+    assert_output('Hello',nil){@main.hello}
+  end
 end

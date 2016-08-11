@@ -19,10 +19,15 @@ module MinitestPractice
     end
 
     def fizz_buzz(n)
-      return 'FizzBuzz' if n % 15 ==0
-      return 'Fizz' if n % 3 ==0
-      return 'Buzz' if n % 5 ==0
-      return ''
+      if n % 15 ==0
+        return 'FizzBuzz'
+      elsif n % 3 == 0
+        return 'Fizz'
+      elsif n % 5 == 0
+        return 'Buzz'
+      else
+        return nil
+      end     
     end
 
     def hello
