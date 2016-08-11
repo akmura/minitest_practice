@@ -53,9 +53,6 @@ class MinitestPracticeTest < Minitest::Test
     [5,10,20,25,35,40,50,55].each{|input|
       assert_equal('Buzz',@main.fizz_buzz(input))
     }
-    
-    
-
   end
 
   def test_hello
